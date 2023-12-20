@@ -1,0 +1,9 @@
+Order: Order_2023_02_18_15_00_06
+Date: 2023/02/18 15:00:06
+Client: client1
+Books Ordered: 
+3 books  Godfather2           OneBookPrice: 1234.10 Total: 3702.30
+7 books  StarWars             OneBookPrice: 1234.20 Total: 8639.40
+
+--*-*--*--*--
+Total: 12341.70
