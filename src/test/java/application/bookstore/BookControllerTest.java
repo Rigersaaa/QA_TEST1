@@ -3,10 +3,7 @@ import application.bookstore.controllers.BookController;
 import application.bookstore.models.Author;
 import application.bookstore.models.Book;
 import application.bookstore.views.BookView;
-import javafx.collections.FXCollections;
 import javafx.scene.control.Label;
-import application.bookstore.models.Book;
-import javafx.scene.paint.Color;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -40,12 +37,12 @@ class BookControllerTest {
         when(bookView.getTitleField().getText()).thenReturn("Test Book");
         when(bookView.getPurchasedPriceField().getText()).thenReturn("10.0");
         when(bookView.getSellingPriceField().getText()).thenReturn("20.0");
-        when(bookView.getAuthorsComboBox().getValue()).thenReturn(new Author("Test Author", "Test Author", "Test Author"));
+        when(bookView.getAuthorsComboBox().getValue()).thenReturn(new Author("Test Author"));
         when(bookView.getStockField().getText()).thenReturn("100");
         when(bookView.getResultLabel()).thenReturn(new Label());
 
         // Mocking the Book.exists() method
-        Book existingBook = new Book("1234567890123", "Test Book", 10.0f, 20.0f, 100, new Author("Test Author", "Test Author", "Test Author"));
+        Book existingBook = new Book("1234567890123", "Test Book", 10.0f, 20.0f, 100, new Author("Test Author"));
         when(existingBook.exists()).thenReturn(true);
 
         // Mocking Book.saveInFile() to return true
